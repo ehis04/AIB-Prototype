@@ -1,0 +1,10 @@
+.body {
+    background-color: white;
+}
+
+.header {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    color: aqua;
+}
