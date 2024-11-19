@@ -12,18 +12,27 @@
     <body>
         <header>
             <H1>
-                <a href="/"><i class="fas fa-arrow-left"></i></a>
+                <a href="javascript:void(0);" onclick="goBackOrHome()">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                
                 Transactions
                 <a href="/contact/"><i class="fas fa-phone"></i></a>
             </H1> 
         </header>
         <main>
             <div class="search" id="search">
-                <H2>
+                <h2>
                     <i class="fas fa-search"></i>
-                    Search
-                </H2>
+                    <input
+                        type="text"
+                        id="search-input"
+                        placeholder="Search by name or date..."
+                        onkeyup="filterTransactions()"
+                    />
+                </h2>
             </div>
+            
             <div class="date" id="date">
                 <H1>Today</H1>
             </div>
@@ -91,10 +100,19 @@
         <footer>
             <div class="footer-content">
                 <a href="/" class="footer-link">
-                  <i class="fas fa-user-circle"></i> <!-- Icon for accounts -->
-                  <span>Accounts</span>
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Accounts</span>
                 </a>
+                <a href="profile/" class="footer-link">
+                    <i class="fas fa-user-circle"></i> 
+                    <span>Profile</span>
+                  </a>
+                  <a href="more/" class="footer-link">
+                    <i class="fa-solid fa-ellipsis"></i>
+                    <span>More</span>
+                  </a>
               </div>              
         </footer>
+        <script src="{% static 'transactions.js' %}"></script>
     </body>
 </html>

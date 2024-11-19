@@ -13,11 +13,10 @@ header {
 }
 
 .fa-phone {
-  position: fixed; /* Keeps the icon in a fixed position on the screen */
-   /* Distance from the top of the screen */
-  right: 30px; /* Distance from the right edge of the screen */
-  font-size: 44px; /* Optional: Adjust the size of the icon */
-  color: black; /* Optional: Set the color of the icon */
+  position: fixed; 
+  right: 30px; 
+  font-size: 44px; 
+  color: black;  
 }
 
 .fa-arrow-left {
@@ -31,24 +30,54 @@ header {
   flex-direction: column;
   gap: 20px;
 }
-.search {
+/*.search {
   background-color: grey;
-  border: 2px solid black; /* Fixed typo: "block" -> "black" */
+  border: 2px solid black; 
   padding: 5px;
-  display: block; /* Ensures the div takes up block space */
+  display: block;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: black;
-  width: 80%; /* 80% width of the parent/container */
-  box-sizing: border-box; /* Ensures padding is included in width */
-  margin: 10px auto; /* Centers the div horizontally */
-  position: relative; /* Keeps its position relative to the normal flow */
-  box-shadow: 2px 2px 5px #D3D3D3; /* Adds shadow with proper offset */
- /* text-align: left; /* Centers text inside the box */
+  width: 80%; 
+  box-sizing: border-box; 
+  margin: 10px auto; 
+  position: relative; 
+  box-shadow: 2px 2px 5px #D3D3D3; 
+
 }
 
 .search H2 {
   text-align: left;
   padding: 10px;
+}
+*/
+.search {
+  background-color: grey;
+  border: 2px solid black;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: black;
+  width: 90%;
+  box-sizing: border-box;
+  margin: 10px auto;
+}
+
+.search h2 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.search input {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 16px;
+  width: 80%;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 .date {
@@ -60,21 +89,20 @@ header {
   background-color: grey;
   border: 2px solid black;
   padding: 10px;
-  display: block; /* Ensure the box behaves like a block element */
+  display: block; 
   border-radius: 5px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: black;
-  width: 90%; /* Set the box width */
-  box-sizing: border-box; /* Ensure padding and border are included in the width */
-  margin: 0 auto; /* Center the box horizontally */
+  width: 90%; 
+  box-sizing: border-box; 
+  margin: 0 auto; 
 }
 
-
 .today h3 {
-  display: flex; /* Enables Flexbox */
-  justify-content: space-between; /* Places items at opposite ends */
-  margin: 0; /* Removes default margin from <h3> */
-  align-items: center; /* Aligns items vertically */
+  display: flex; 
+  justify-content: space-between; 
+  margin: 0; 
+  align-items: center; 
 }
 
 .left-text {
@@ -85,53 +113,58 @@ header {
   text-align: right;
 }
 
-footer {
-  background-color: black; /* Dark background */
-  color: white; /* White text */
-  padding: 20px;
-  text-align: center;
-  width: 100vw; /* Use viewport width */
-  margin-top: 40px; /* Add space above */
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-content p {
-  margin: 5px 0;
+* {
+  box-sizing: border-box;
 }
 
 body, html {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  margin-top: 40px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.footer-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.footer-link i {
+  font-size: 50px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.footer-link span {
+  font-size: 14px;
 }
 
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
-    align-items: center;
+    gap: 20px;
   }
-}
-
-.footer-link {
-  display: flex;
-  flex-direction: column; /* Stack icon above text */
-  align-items: center; /* Center align icon and text */
-  text-decoration: none; /* Remove underline from link */
-  color: white; /* Text color */
-}
-
-.footer-link i {
-  font-size: 24px; /* Adjust icon size */
-  margin-bottom: 5px; /* Space between icon and text */
-  color: white; /* Icon color */
-}
-
-.footer-link span {
-  font-size: 16px; /* Adjust text size */
 }
