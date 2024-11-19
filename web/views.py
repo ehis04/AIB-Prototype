@@ -20,3 +20,6 @@ def profile(request):
 
 def more(request):
     return render(request, 'more.html')
+
+def back(request):
+    return render(request, 'back.html')

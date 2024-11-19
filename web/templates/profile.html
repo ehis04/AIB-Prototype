@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'profile.css' %}">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <H1>
+                <a href="javascript:void(0);" onclick="goBackOrHome()">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                Profile
+                <a href="/contact/"><i class="fas fa-phone"></i></a>
+            </H1> 
+            <div class="details" id="details">
+                <H3>Registration Number</H3>
+                <H1>555111888</H3>
+                <H2>Giannis LeoPaul</H3>
+            </div>
+        </header>
+        <main>
+
+            <div class="container" id="container">
+                <div class="info" id="info">
+                    <H1><i class="fa-solid fa-person"></i>  <a href="/back/">Personal Details</a></H1>
+                    <H2>Confirm and update your contact details</H2>
+                </div>
+            </div>
+            <div class="container" id="container">
+                <div class="info" id="info">
+                    <H1><i class="fa-solid fa-id-card"></i>  <a href="/back/">Verify Your PPSN</a></H1>
+                    <H2>Verify your PPSN to apply for AIB credit</H2>
+                </div>
+            </div>
+            <div class="container" id="container">
+                <div class="info" id="info">
+                    <H1><i class="fa-solid fa-receipt"></i>  <a href="/back/">Change Account Type</a></H1>
+                    <H2>Apply For A Mature or Student Account</H2>
+                </div>
+            </div>
+
+        </main>
+        <footer>
+            <div class="footer-content">
+                <a href="/" class="footer-link">
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Accounts</span>
+                </a>
+                <a href="/profile/" class="footer-link">
+                    <i class="fas fa-user-circle"></i> 
+                    <span>Profile</span>
+                  </a>
+                  <a href="/more/" class="footer-link">
+                    <i class="fa-solid fa-ellipsis"></i>
+                    <span>More</span>
+                  </a>
+              </div>              
+        </footer>
+        <script src="{% static 'transactions.js' %}"></script>
+    </body>
+</html>
