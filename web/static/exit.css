@@ -1,11 +1,10 @@
 
 
   .fa-phone {
-    position: fixed; /* Keeps the icon in a fixed position on the screen */
-     /* Distance from the top of the screen */
-    right: 30px; /* Distance from the right edge of the screen */
-    font-size: 44px; /* Optional: Adjust the size of the icon */
-    color: black; /* Optional: Set the color of the icon */
+    position: fixed;
+    right: 30px;
+    font-size: 44px; 
+    color: black; 
   }
   
   .fa-arrow-left {
@@ -25,4 +24,57 @@
     padding: 0;
     overflow-x: hidden;
   }
+
+  .card-functions p{
+    margin: 10px 30px 55px;
+    margin-top: 30px;
+    font-size: 30px;
+    color: black;
+    border-bottom: 1px solid #d3d3d3;
+  }
   
+  footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+  }
+  
+  .footer-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .footer-link i {
+    font-size: 50px;
+    margin-bottom: 5px;
+    color: white;
+  }
+  
+  .footer-link span {
+    font-size: 14px;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
