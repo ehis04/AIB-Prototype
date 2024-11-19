@@ -1,79 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title> AIB Prototype </title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header> 
-            <h1> Account </h1>
-            <p> Available Funds </p>
-            <div class="balance">
-                <h2 class="amount">€500.00</h2>
-                <button class="currAccount" onclick="toggleDropdown()"> Savings - 123 ▼ </button>
-                <div class="menu" id="accountMenu">
-                    <a href="index.html"> Current - 055 </a>
-                    <a href="savings.html"> Savings - 123 </a>
-                </div>
-            </div>
-        </header>
-        <main>
-            <div class="functions">
-                <div class="circle-button">
-                    <a href="">
-                        <img src="pay.png" alt="Pay">
-                    </a>
-                    <p> Pay & Tranfers </p>
-                </div>
-                <div class="circle-button">
-                    <a href="transactions.html">
-                        <img src="transaction.png" alt="Transaction">
-                    </a>
-                    <p> Transactions </p>
-                </div>
-                <div class="circle-button">
-                    <a href="">
-                        <img src="acc.png" alt="Account">
-                    </a>
-                    <p> Account Details </p>
-                </div>
-                <div class="circle-button">
-                    <a href="">
-                        <img src="statement.png" alt="Statement">
-                    </a>
-                    <p> Statements </p>
-                </div>
-                <div class="circle-button">
-                    <a href="">
-                        <img src="card.jpg" alt="Card">
-                    </a>
-                    <p> Cards </p>
-                </div>
-                <div class="circle-button">
-                    <a href="">
+{% extends "base.html" %}
+{% load static %}
 
-                    </a>
-                    <p> </p>
-                </div>
+{% block content %}
+<header> 
+    <h1> 
+        Account 
+    </h1>
+    <p> Available Funds </p>
+    <h3> Savings - 123 Account </h3>
+    <div class="balance">
+        <h2 class="amount"><a href="{% url 'transactions' %}">€500.00</h2>
+        <button class="currAccount" onclick="toggleDropdown()"> Savings - 123 ▼ </button>
+        <div class="menu" id="accountMenu">
+            <a href="/"> Current - 055 </a>
+            <a href="{% url 'savings' %}"> Savings - 123 </a>
+        </div>
+    </div>
+</header>
+<div class="quick-pay">
+    <div class="quick-pay-header">
+        <h2>Quick Pay </h2>
+        <div class="display-payee">+ Display payee</div>
+    </div>
+    <div class="quick-pay-options">
+        <div class="quick-pay-option">
+            <div class="quick-pay-icon">
+                <img src="{% static 'between.png' %}" alt="Between Accounts">
             </div>
-
-            <div class="footer-functions">
-                <div class="circle-button">
-                    <a href="">
-                        <img src="profile.png" alt="Profile">
-                    </a>
-                    <p> Profile </p>
-                </div>
-                <div class="circle-button">
-                    <a href="">
-                        <img src="dots.png" alt="Dots">
-                    </a>
-                    <p> More </p>
-                </div>
+            <p>Between accounts</p>
+        </div>
+        <div class="quick-pay-option">
+            <div class="quick-pay-icon">
+                <img src="{% static 'profile.png' %}" alt="Another Account">
             </div>
-        </main>
+            <p>Another account</p>
+        </div>
+        <div class="quick-pay-option">
+            <div class="quick-pay-icon">
+                <span class="add-icon">+</span>
+            </div>
+            <p>Add</p>
+        </div>
+    </div>
+</div>
 
-        <script src="script.js"></script>
-    </body>
-</html>
+<main>
+    <div class="functions">
+        <div class="circle-button">
+            <a href="">
+                <img src="{% static 'pay.png' %}" alt="Pay">
+            </a>
+            <p> Pay & Transfers </p>
+        </div>
+        <div class="circle-button">
+            <a href="{% url 'transactions' %}">
+                <img src="{% static 'transaction.png' %}" alt="Transaction">
+            </a>
+            <p> Transactions </p>
+        </div>
+        <div class="circle-button">
+            <a href="">
+                <img src="{% static 'acc.png' %}" alt="Account">
+            </a>
+            <p> Account Details </p>
+        </div>
+        <div class="circle-button">
+            <a href="">
+                <img src="{% static 'statement.png' %}" alt="Statement">
+            </a>
+            <p> Statements </p>
+        </div>
+        <div class="circle-button">
+            <a href="">
+                <img src="{% static 'card.jpg' %}" alt="Card">
+            </a>
+            <p> Cards </p>
+        </div>
+    </div>
+</main>
+<script src="{% static 'script.js' %}"></script>
+{% endblock content %}
