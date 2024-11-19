@@ -14,3 +14,6 @@ def savings(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+def cards(request):
+    return render(request, 'cards.html')

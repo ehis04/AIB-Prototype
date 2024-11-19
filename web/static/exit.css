@@ -1,0 +1,28 @@
+
+
+  .fa-phone {
+    position: fixed; /* Keeps the icon in a fixed position on the screen */
+     /* Distance from the top of the screen */
+    right: 30px; /* Distance from the right edge of the screen */
+    font-size: 44px; /* Optional: Adjust the size of the icon */
+    color: black; /* Optional: Set the color of the icon */
+  }
+  
+  .fa-arrow-left {
+    position: fixed;
+    left: 30px;
+    font-size: 44px;
+    color: black;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  

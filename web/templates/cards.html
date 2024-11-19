@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+<body> 
+    {% block content %}
+    <header> 
+        <H1>
+            <a href="/"><i class="fas fa-arrow-left"></i></a>
+            Cards
+            <a href="/contact/"><i class="fas fa-phone"></i></a>
+        </H1> 
+        <div class="card-image">
+            <img src="{% static 'credit.jpg' %}" alt="Credit">
+        </div>
+    </header>
+
+    <div class="card-functions"> 
+        <p> Freeze my card </p>
+        <p> Show my PIN </p>
+        <p> Cancel and replace my card </p>
+        <p> Replace my damaged card </p>
+        <p> Travel note </p>
+    </div>
+    {% endblock content %}
+</body>
