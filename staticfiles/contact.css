@@ -1,21 +1,15 @@
-.body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-}
-
-.header {
-    background-color: grey;
-    border: 2px solid black; /* Fixed typo: "block" -> "black" */
-    padding: 5px;
-    display: block; /* Ensures the div takes up block space */
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  header {
+    background-color: #D3D3D3;
     color: black;
-    width: 80%; /* 80% width of the parent/container */
-    box-sizing: border-box; /* Ensures padding is included in width */
-    margin: 10px auto; /* Centers the div horizontally */
-    position: relative; /* Keeps its position relative to the normal flow */
-    box-shadow: 2px 2px 5px #D3D3D3; /* Adds shadow with proper offset */
-   
-}
+    text-align: center;
+    padding: 20px;
+  }
+  
+  

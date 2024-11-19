@@ -116,13 +116,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
+import os
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-# settings.py
-import os
 
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'web', 'static')]
+STATICFILES_DIRS = [
+    BASE_DIR / 'web' / 'static',  # Ensure this matches your actual folder structure
+]
+
 
 
 TEMPLATES = [
