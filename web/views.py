@@ -23,3 +23,5 @@ def more(request):
 
 def back(request):
     return render(request, 'back.html')
+def cards(request):
+    return render(request, 'cards.html')

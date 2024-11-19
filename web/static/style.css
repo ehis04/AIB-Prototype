@@ -1,136 +1,131 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;   
+}
+  
+header {
+  background-color: #D3D3D3;
+  color: black;
+  text-align: center;
+  padding: 20px;
+}
+  
+  
+.balance {
+  text-align: center;
+  margin: 15px 0;
     
-  }
+}
   
-  header {
-    background-color: #D3D3D3;
-    color: black;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .icon-left, .icon-right {
-    font-size: 24px;
-  }
-  
-  
-  .balance {
-    text-align: center;
-    margin: 15px 0;
-    
-  }
-  
-  .amount {
-    font-size: 36px;
-    color: green;
-    margin: 15px;
-  }
+.amount {
+  font-size: 36px;
+  color: green;
+  margin: 15px;
+}
 
-  .amount a {
-    text-decoration: none;
-    color: green;
-    font-weight: bold;
+.amount a {
+  text-decoration: none;
+  color: green;
+  font-weight: bold;
 }
 
 .amount a:hover {
-    color: darkgreen;
-    text-decoration: underline;
+  color: darkgreen;
+  text-decoration: underline;
 }
 
   
-  .currAccount {
-    background-color: #555;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    position: relative;
+.currAccount {
+  background-color: #555;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
 }
   
-  .currAccount:hover {
-    background-color: white;
-    color: black;
-  }
+.currAccount:hover {
+  background-color: white;
+  color: black;
+}
 
-  .functions {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px 4px;
-    justify-items: center;
-    padding: 40px;
+.functions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 4px;
+  justify-items: center;
+  padding: 40px;
     
-  }
+}
   
-  .circle-button {
-    width: 120px;
-    height: 120px;
-    background-color: #D3D3D3;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    margin-bottom: 10px;
-    flex-direction: column;
-  }
+.circle-button {
+  width: 120px;
+  height: 120px;
+  background-color: #D3D3D3;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+  flex-direction: column;
+}
   
-  .circle-button:hover {
-    background-color: green;
-  }
-
-  .circle-button img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-  }
-  
-  .circle-button p {
-    margin: 10px 0 0;
-    margin-top: 5px;
-    font-size: 13px;
-    text-align: center;
-    color: black;
+.circle-button:hover {
+  background-color: green;
 }
 
-  .menu {
-    display: none;
-    position: absolute;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    margin-top: 10px;
-    width: 200px;
-    z-index: 1000;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 10px;
-  }
+.circle-button img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+  
+.circle-button p {
+  margin: 10px 0 0;
+  margin-top: 5px;
+  font-size: 13px;
+  text-align: center;
+  color: black;
+}
 
-  .menu a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: black;
-    border-bottom: 1px solid #ddd;
-  }
+.menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 200px;
+  z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+}
 
-  .menu a:last-child {
-    border-bottom: none;
-  }
+.menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;  
+  color: black;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu a:last-child {
+  border-bottom: none;
+}
 
 
 .quick-pay {
   background-color: white;
   padding: 20px;
   border: #D3D3D3;
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .quick-pay-header {
