@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+<body> 
+    {% block content %}
+    <header> 
+        <H1>
+            <a href="/"><i class="fas fa-arrow-left"></i></a>
+            Statements
+            <a href="/contact/"><i class="fas fa-phone"></i></a>
+        </H1> 
+    </header>
+    <main>
+        <h3> I want to see my </h3>
+
+        <div class="pay-options">
+            <div class="pay-option">
+                <div class="pay-icon">
+                    <img src="{% static 'between.png' %}" alt="Between Accounts">
+                </div>
+                <p>Statements</p>
+            </div>
+            <div class="pay-option">
+                <div class="pay-icon">
+                    <img src="{% static 'profile.png' %}" alt="Another Account">
+                </div>
+                <p>Annual Statement of Fees</p>
+            </div>
+
+            <h3> Select Account </h3>
+            <p> Current - 055 </p>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <a href="/" class="footer-link">
+                <i class="fa-solid fa-file-invoice"></i>
+                <span>Accounts</span>
+            </a>
+            <a href="profile/" class="footer-link">
+                <i class="fas fa-user-circle"></i> 
+                <span>Profile</span>
+              </a>
+              <a href="more/" class="footer-link">
+                <i class="fa-solid fa-ellipsis"></i>
+                <span>More</span>
+              </a>
+          </div>              
+    </footer>
+
+    {% endblock content %}
+</body>

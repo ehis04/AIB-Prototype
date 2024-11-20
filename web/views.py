@@ -28,3 +28,9 @@ def cards(request):
 
 def account(request):
     return render(request, 'account.html')
+
+def pay(request):
+    return render(request, 'pay.html')
+
+def statements(request):
+    return render(request, 'statements.html')

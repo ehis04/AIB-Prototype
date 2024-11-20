@@ -7,7 +7,7 @@
         Account 
     </h1>
     <p> Available Funds </p>
-    <h3> Savings - 123 Account </h3>
+    <h3 class="link"><a href="{% url 'account' %}"> Savings - 123 Account </a></h3>
     <div class="balance">
         <h2 class="amount"><a href="{% url 'transactions' %}">€500.00</h2>
         <button class="currAccount" onclick="toggleDropdown()"> Savings - 123 ▼ </button>
@@ -47,7 +47,7 @@
 <main>
     <div class="functions">
         <div class="circle-button">
-            <a href="">
+            <a href="{% url 'pay' %}">
                 <img src="{% static 'pay.png' %}" alt="Pay">
             </a>
             <p> Pay & Transfers </p>
@@ -59,13 +59,13 @@
             <p> Transactions </p>
         </div>
         <div class="circle-button">
-            <a href="">
+            <a href="{% url 'profile' %}">
                 <img src="{% static 'acc.png' %}" alt="Account">
             </a>
-            <p> Account Details </p>
+            <p> Profile </p>
         </div>
         <div class="circle-button">
-            <a href="">
+            <a href="{% url 'statements' %}">
                 <img src="{% static 'statement.png' %}" alt="Statement">
             </a>
             <p> Statements </p>
@@ -76,7 +76,30 @@
             </a>
             <p> Cards </p>
         </div>
+        <div class="circle-button">
+            <a href="{% url 'account' %}">
+                <img src="{% static 'details.png' %}" alt="Account">
+            </a>
+            <p> Account Details </p>
+        </div>
     </div>
 </main>
+
+<footer>
+    <div class="footer-content">
+        <a href="/" class="footer-link">
+            <i class="fa-solid fa-file-invoice"></i>
+            <span>Accounts</span>
+        </a>
+        <a href="/profile/" class="footer-link">
+            <i class="fas fa-user-circle"></i> 
+            <span>Profile</span>
+          </a>
+          <a href="/more/" class="footer-link">
+            <i class="fa-solid fa-ellipsis"></i>
+            <span>More</span>
+          </a>
+      </div>              
+</footer>
 <script src="{% static 'script.js' %}"></script>
 {% endblock content %}

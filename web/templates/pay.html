@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+
+<body> 
+    {% block content %}
+    <header> 
+        <H1>
+            <a href="/"><i class="fas fa-arrow-left"></i></a>
+            Account Details
+            <a href="/contact/"><i class="fas fa-phone"></i></a>
+        </H1> 
+    </header>
+    <main>
+        <div class="pay-options">
+            <div class="pay-option">
+                <div class="pay-icon">
+                    <img src="{% static 'between.png' %}" alt="Between Accounts">
+                </div>
+                <p>Between accounts</p>
+            </div>
+            <div class="pay-option">
+                <div class="pay-icon">
+                    <img src="{% static 'profile.png' %}" alt="Another Account">
+                </div>
+                <p>Another account</p>
+            </div>
+            <div class="pay-option">
+                <div class="pay-icon">
+                    <img src="{% static 'bill.png' %}" alt="Mobile Top Up">
+                </div>
+                <p>Pay a bill</p>
+            </div>
+            <div class="pay-option">
+                <div class="pay-icon">
+                    <img src="{% static 'mobile.png' %}" alt="Mobile Top Up">
+                </div>
+                <p>Mobile top up</p>
+            </div>
+        </div>
+        <div class="card-functions">
+            <p> Payees </p>
+            <p> Direct debits </p>
+            <p> Standing orders </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <a href="/" class="footer-link">
+                <i class="fa-solid fa-file-invoice"></i>
+                <span>Accounts</span>
+            </a>
+            <a href="profile/" class="footer-link">
+                <i class="fas fa-user-circle"></i> 
+                <span>Profile</span>
+              </a>
+              <a href="more/" class="footer-link">
+                <i class="fa-solid fa-ellipsis"></i>
+                <span>More</span>
+              </a>
+          </div>              
+    </footer>
+
+    {% endblock content %}
+</body>

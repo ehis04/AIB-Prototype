@@ -79,3 +79,44 @@
       gap: 20px;
     }
   }
+
+  .pay-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 500px;
+    gap: 1px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pay-option {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pay-icon {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    background-color: #0f8a0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px;
+    position: relative;
+}
+
+.pay-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.pay-option p {
+    font-size: 17px;
+    color: #555;
+    margin: 0;
+}
