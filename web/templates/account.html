@@ -1,38 +1,46 @@
 {% extends "base.html" %}
 {% load static %}
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Details</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
 <body> 
     {% block content %}
     <header> 
-        <H1>
+        <h1>
             <a href="/"><i class="fas fa-arrow-left"></i></a>
             Account Details
             <a href="/contact/"><i class="fas fa-phone"></i></a>
-        </H1> 
+        </h1> 
     </header>
     <main> 
         <div class="iban"> 
             <h3> IBAN </h3>
         </div>
-        <div class="details" id="details"> 
+        <div class="details" id="iban-details"> 
             <p> IE18AIB624846476477468 </p>
         </div>
         <div class="bic"> 
             <h3> BIC </h3>
         </div>
-        <div class="details" id="details"> 
+        <div class="details" id="bic-details"> 
             <p> AIBKIE4D </p>
         </div>
         <div class="number"> 
             <h3> Account Number </h3>
         </div>
-        <div class="details" id="details"> 
+        <div class="details" id="account-number-details"> 
             <p> 78357567 </p>
         </div>
         <div class="nsc"> 
             <h3> Sort Code (NSC) </h3>
         </div>
-        <div class="details" id="details"> 
+        <div class="details" id="nsc-details"> 
             <p> 578356 </p>
         </div>
     </main>
@@ -46,13 +54,13 @@
             <a href="/profile/" class="footer-link">
                 <i class="fas fa-user-circle"></i> 
                 <span>Profile</span>
-              </a>
-              <a href="/more/" class="footer-link">
+            </a>
+            <a href="/more/" class="footer-link">
                 <i class="fa-solid fa-ellipsis"></i>
                 <span>More</span>
-              </a>
-          </div>              
+            </a>
+        </div>              
     </footer>
-
     {% endblock content %}
 </body>
+</html>

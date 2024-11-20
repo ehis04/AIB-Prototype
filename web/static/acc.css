@@ -1,0 +1,29 @@
+.details {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 25px 10px;
+    background-color: #dedede; 
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+  }
+  
+.iban {
+    margin-top: 35px;
+    margin-left: 10px;
+}
+
+.bic {
+    margin-top: 35px;
+    margin-left: 10px;
+}
+
+.number {
+    margin-top: 35px;
+    margin-left: 10px;
+}
+
+.nsc {
+    margin-top: 35px;
+    margin-left: 10px;
+}
