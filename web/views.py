@@ -17,3 +17,6 @@ def contact(request):
 
 def cards(request):
     return render(request, 'cards.html')
+
+def account(request):
+    return render(request, 'account.html')
