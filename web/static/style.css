@@ -65,7 +65,18 @@ header {
   font-size: 16px;
   position: relative;
 }
-  
+
+.select {
+  background-color: #555;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  margin: 50px;
+}
 .currAccount:hover {
   background-color: white;
   color: black;
@@ -93,7 +104,11 @@ header {
   margin-bottom: 10px;
   flex-direction: column;
 }
-  
+
+.stateH3 {
+  margin: 20px;
+  margin-bottom: 83px;
+}
 .circle-button:hover {
   background-color: green;
 }
