@@ -27,11 +27,20 @@ body {
   }
   
   .container {
-    display: flex;
-    justify-content: center; 
-    margin: 0; 
+    background-color: lightgrey;
+    border: 2px solid black;
     padding: 20px;
+    display: flex;
+    flex-direction: column; /* Ensure vertical stacking */
+    align-items: center; /* Center content horizontally */
+    border-radius: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    width: 90%; /* Ensure proper width */
+    box-sizing: border-box;
+    margin: 20px auto; /* Add consistent spacing */
 }
+
 
 .text {
     text-align: center;
@@ -46,28 +55,41 @@ body {
 }
 
 .faq-container {
-    display: flex;
-    margin: 0;
-    padding: 20px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+  width: 90%;
+  box-sizing: border-box;
 }
 
 .faq {
-    border: 2px solid black;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: white;
-    width: 100vw;
-    margin: 0 auto;
-    box-sizing: border-box;
-    font-size: large;
-    padding: 20px;
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+  width: 100%; /* Ensure it spans the container width */
+  box-sizing: border-box;
+  font-size: 18px; /* Adjust text size */
+  text-align: left; /* Align FAQ content to the left */
 }
 
 .faq span {
-    text-align: center;
-    justify-content: center;
+  display: block; /* Ensure each question starts on a new line */
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
+.faq h3 {
+  margin: 10px 0 20px;
+  font-size: 16px;
+}
+
+
+.faq H3, .faq span{
+    font-size:x-large
+}
 * {
   box-sizing: border-box;
 }
@@ -123,3 +145,4 @@ footer {
     gap: 20px;
   }
 }
+

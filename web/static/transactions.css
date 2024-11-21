@@ -86,7 +86,7 @@ header {
 }
 
 .today {
-  background-color: grey;
+  background-color: lightgrey;
   border: 2px solid black;
   padding: 10px;
   display: block; 
@@ -109,8 +109,13 @@ header {
   text-align: left;
 }
 
-.right-text {
+.right-textu {
   text-align: right;
+  color: green;
+}
+.right-textd {
+  text-align: right;
+  color: red;
 }
 
 * {
