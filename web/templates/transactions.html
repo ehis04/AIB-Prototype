@@ -45,81 +45,112 @@
             </H1> 
         </header>
         <main>
+            <div class="overlay" id="overlay" onclick="hideMonthPicker()"></div>
             <div class="search" id="search">
                 <h2>
-                    <i class="fas fa-search"></i>
-                    <input
-                        type="text"
-                        id="search-input"
-                        placeholder="Search by name or date..."
-                        onkeyup="filterTransactions()"
-                    />
+                  <i class="fas fa-search"></i>
+                  <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search by name, figure or date..."
+                    onkeyup="filterTransactions()"
+                  />
                 </h2>
-            </div>
+                <div class="picker-wrapper" style="position: relative;">
+                    <i class="fas fa-calendar-alt calendar-icon" onclick="toggleMonthPicker()"></i>
+                    <div class="month-picker" id="month-picker">
+                      <button onclick="selectMonth('january')">January</button>
+                      <button onclick="selectMonth('february')">February</button>
+                      <button onclick="selectMonth('march')">March</button>
+                      <button onclick="selectMonth('april')">April</button>
+                      <button onclick="selectMonth('may')">May</button>
+                      <button onclick="selectMonth('june')">June</button>
+                      <button onclick="selectMonth('july')">July</button>
+                      <button onclick="selectMonth('august')">August</button>
+                      <button onclick="selectMonth('september')">September</button>
+                      <button onclick="selectMonth('october')">October</button>
+                      <button onclick="selectMonth('november')">November</button>
+                      <button onclick="selectMonth('december')">December</button>
+                    </div>
+                  </div>
+                </div>
+              
+              
             
-            <div class="date" id="date">
-                <H1>Today</H1>
+            <div class="date" id="date" data-date="2024-11-17">
+                <h1>Today</h1>
             </div>
-            <div class="today" id="today">
-                <H3>
+            <div class="today" id="today" data-date="2024-11-17">
+                <h3>
                     <span class="left-text">BET365</span>
                     <span class="right-textd">-€700</span> 
-                </H3>
+                </h3>
             </div>
-            <div class="date" id="date">
-                <H1>Yesterday</H1>
+            <div class="date" id="date" data-date="2024-11-16">
+                <h1>Yesterday</h1>
             </div>
-            <div class="today" id="today">
-                <H3>
+            <div class="today" id="today" data-date="2024-11-16">
+                <h3>
                     <span class="left-text">Lidl</span>
                     <span class="right-textu">+€70</span> 
-                </H3>
+                </h3>
             </div>
-            <div class="date" id="date">
-                <H1>Saturday 16th November</H1>
+            <div class="date" id="date" data-date="2024-11-15">
+                <h1>Saturday 16th November</h1>
             </div>
-            <div class="today" id="today">
-                <H3>
+            <div class="today" id="today" data-date="2024-11-15">
+                <h3>
                     <span class="left-text">Amazon</span>
                     <span class="right-textu">+€53.47</span> 
-                </H3>
+                </h3>
             </div>
-            <div class="date" id="date">
-                <H1>Sunday 10th November</H1>
+            <div class="date" id="date" data-date="2024-11-10">
+                <h1>Sunday 10th November</h1>
             </div>
-            <div class="today" id="today">
-                <H3>
+            <div class="today" id="today" data-date="2024-11-10">
+                <h3>
                     <span class="left-text">BET365</span>
                     <span class="right-textd">-€7000</span> 
-                </H3>
+                </h3>
             </div>
-            <div class="date" id="date">
-                <H1>Friday 8th November</H1>
+            <div class="date" id="date" data-date="2024-11-08">
+                <h1>Friday 8th November</h1>
             </div>
-            <div class="today" id="today">
-                <H3>
+            <div class="today" id="today" data-date="2024-11-08">
+                <h3>
                     <span class="left-text">BET365</span>
                     <span class="right-textu">+€7000</span> 
-                </H3>
+                </h3>
             </div>
-            <div class="date" id="date">
-                <H1>Wednesday 6th November</H1>
+            <div class="date" id="date" data-date="2024-11-06">
+                <h1>Wednesday 6th November</h1>
             </div>
-            <div class="today" id="today">
-                <H3>
+            <div class="today" id="today" data-date="2024-11-06">
+                <h3>
                     <span class="left-text">Tesco</span>
                     <span class="right-textd">-€21.46</span> 
-                </H3>
+                </h3>
             </div>
-            <div class="date" id="date">
-                <H1>Tuesday 5th November</H1>
+            <div class="date" id="date" data-date="2024-11-05">
+                <h1>Tuesday 5th November</h1>
             </div>
-            <div class="today" id="today">
-                <H3>
+            <div class="today" id="today" data-date="2024-11-05">
+                <h3>
                     <span class="left-text">Curry's PC World</span>
                     <span class="right-textd">-€81.50</span> 
-                </H3>
+                </h3>
+            </div>   
+            <div class="date" id="date" data-date="2024-10-22">
+                <h1>Tuesday 22nd October</h1>
             </div>
+            <div class="today" id="today" data-date="2024-11-05">
+                <h3>
+                    <span class="left-text">Harvey Norman</span>
+                    <span class="right-textd">-€93.50</span> 
+                </h3>
+            </div>  
+
+                    
         </main>
         <footer>
             <div class="footer-content">
@@ -142,5 +173,11 @@
             </div>              
         </footer>
         <script src="{% static 'transactions.js' %}"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js" 
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" 
+        crossorigin="anonymous"></script>
+
+
+
     </body>
 </html>
